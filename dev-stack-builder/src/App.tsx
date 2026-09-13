@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Hero from "./Hero"
 import Nav from "./Nav"
 
@@ -7,7 +8,10 @@ function App() {
     <>
       <div>
         <Nav></Nav>
+
         <Hero></Hero>
+
+        <Footer></Footer>
       </div>
     </>
   )
