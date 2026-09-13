@@ -1,6 +1,8 @@
 import { BsTwitter } from "react-icons/bs";
-import { GiThunderBlade } from "react-icons/gi";
 import { LiaLinkedin } from "react-icons/lia";
+import logo from "./assets/logo-text.png";
+import { FaFacebook } from "react-icons/fa";
+
 
 function Footer() {
     const productLinks = ["Technologies", "Projects", "Pricing", "Roadmap"];
@@ -11,15 +13,9 @@ function Footer() {
         <footer className="bg-gray-50 border-t px-8 py-12">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
 
-                {/* Brand block */}
                 <div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-9 h-9 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                            DS
-                        </div>
-                        <h1 className="text-lg font-semibold">
-                            Dev <span className="text-pink-600">Stack</span>
-                        </h1>
+                     <div className="flex items-center gap-2">
+                        <img src={logo} alt="Dev Stack Logo" />
                     </div>
 
                     <p className="text-gray-600 mt-4 text-sm">
@@ -28,7 +24,7 @@ function Footer() {
                     </p>
 
                     <div className="flex gap-4 mt-4 text-gray-600">
-                        <a href="#"><GiThunderBlade size={20} /></a>
+                        <a href="#"><FaFacebook size={20} /></a>
                         <a href="#"><BsTwitter size={20} /></a>
                         <a href="#"><LiaLinkedin size={20} /></a>
                     </div>

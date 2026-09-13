@@ -1,58 +1,45 @@
 import heroImage from "./assets/banner-stack.png";
 
-const Hero = () => {
+function Hero() {
     return (
-        <section className="bg-white">
-            <div className="container mx-auto px-8">
+        <section className="flex flex-col md:flex-row items-center justify-between px-8 py-20 max-w-7xl mx-auto gap-10">
 
-                <div className="min-h-[550px] flex items-center justify-between">
+            {/* Left: Text content */}
+            <div className="max-w-xl">
+                <h1 className="text-5xl font-extrabold leading-tight">
+                    Build Your Ideal <br />
+                    <span className="bg-gradient-to-r from-orange-500 via-pink-600 to-purple-600 bg-clip-text text-transparent">
+                        Development Stack
+                    </span>
+                </h1>
 
-                    {/* Left Side */}
-                    <div className="w-1/2">
+                <p className="mt-6 text-gray-600 text-lg">
+                    Explore frontend, backend, database, and tooling options, compare
+                    them side by side, and put together the stack that fits your next
+                    project.
+                </p>
 
-                        <h1 className="text-5xl font-extrabold leading-tight text-[#111827]">
-                            Build Your Ideal
-                        </h1>
-
-                        <h2 className="text-5xl font-extrabold leading-tight bg-gradient-to-r from-orange-500 via-pink-600 to-purple-600 bg-clip-text text-transparent">
-                            Development Stack
-                        </h2>
-
-                        <p className="mt-6 max-w-xl text-lg leading-8 text-[#334155]">
-                            Explore frontend, backend, database, and tooling
-                            options, compare them side by side, and put together
-                            the stack that fits your next project.
-                        </p>
-
-                        <div className="mt-8 flex gap-3">
-
-                            <button className="rounded-lg bg-gradient-to-r from-orange-500 via-pink-600 to-purple-600 px-6 py-3 font-semibold text-white">
-                                Explore Technologies
-                            </button>
-
-                            <button className="rounded-lg border border-gray-200 px-6 py-3 font-medium text-gray-700">
-                                Learn More
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    {/* Right Side */}
-                    <div className="w-1/2 flex justify-center">
-
-                        <img
-                            src={heroImage}
-                            alt="Development Stack"
-                            className="w-120"
-                        />
-
-                    </div>
-
+                <div className="mt-8 flex items-center gap-4">
+                    <button className="bg-gradient-to-r from-orange-500 to-purple-600 text-white font-semibold px-6 py-3 rounded-lg">
+                        Explore Technologies
+                    </button>
+                    <button className="border border-gray-300 text-gray-700 font-semibold px-6 py-3 rounded-lg">
+                        Learn More
+                    </button>
                 </div>
             </div>
+
+            {/* Right: Illustration */}
+            <div className="flex-shrink-0">
+                <img
+                    src={heroImage}
+                    alt="Development stack illustration"
+                    className="w-72 md:w-96"
+                />
+            </div>
+
         </section>
     );
-};
+}
 
 export default Hero;
